@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="cadastro_car.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-</head>
-<body>
-  
-   <nav id="navnresp" class="navbar navbar-expand-lg bg-white">
-        <div class="container">
-          <div class="navbar-brand">
-            <a href="#">
-                <img src="img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar" >
-            </a>
-          </div>
-            <div class="d-flex">
-                <a class="btn btn-light mx-2" href="#">Home</a>
-                <a class="btn btn-light mx-2" href="#">Aluguéis</a>
-                <a class="btn btn-light mx-2" href="#">Ofertas</a>
-            </div>
-        </div>
-    </nav>
 
-    <nav id="navresp" class="navbar bg-body-tertiary fixed-top">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cadastro_car.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav id="navnresp" class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="#">
+          <img src="img/logo_finanCar_sem fundo (1).png" class="im_logo" alt="Logo FinanCar">
+        </a>
+      </div>
+      <div class="d-flex">
+        <a class="btn btn-light mx-2" href="#">Home</a>
+        <a class="btn btn-light mx-2" href="#">Aluguéis</a>
+        <a class="btn btn-light mx-2" href="#">Ofertas</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="navresp" class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
       <div class="nb">
         <a class="navbar-brand" href="#">
-          <img src="img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar" >
+          <img src="img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Aluguéis</a>
-              </li>
-            </ul>
-          </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ofertas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aluguéis</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   </nav>
 
@@ -61,15 +65,15 @@
     <div class="i">
       <h3 class=""> Cadastre seu veículo</h3>
       <form id="cadastro_car">
-        
+
         <!-- TIPO DE CONTRATO -->
         <div class="tipo_contrato">
           <h5 class="tipo">Tipo de contrato</h5>
           <div class="check_div" id="div_contrato">
             <label for="">Vender</label>
-            <input type="checkbox" name="contrato" id="contrato_comprar" value= false>
+            <input type="checkbox" name="contrato" id="contrato_comprar" value=false>
             <label for="">Alugar</label>
-            <input type="checkbox" name="contrato" id="contrato_aluguel" value= true>
+            <input type="checkbox" name="contrato" id="contrato_aluguel" value=true>
           </div>
           <div id="invalid_contrato" class="invalid-feedbac"></div>
         </div>
@@ -105,7 +109,7 @@
             <input type="text" class="imput" id="imput_cor" placeholder="Insira a cor">
             <div id="invalid_cor" class="invalid-feedbac"></div>
           </div>
-          <!-- KM --> 
+          <!-- KM -->
           <div class="mb-3">
             <label for="imput_km" class="label">Kilometragem</label>
             <input type="number" class="imput" id="imput_km" placeholder="Insira a kilometragem">
@@ -149,203 +153,168 @@
             <div id="invalid_motor" class="invalid-feedbac"></div>
           </div>
         </div>
-        
+
         <div class="opcionais">
 
           <h5 class="tipo">Informações opcionais</h5>
 
-            <!-- AR-CONDICIONADO -->
-            <div class="check_div">
-              <label for="check_ar">Ar-condicionado</label>
-              <input name="opcionais" type="checkbox" id="check_ar" value="Ar-condicionado">
-            </div>
-            <!-- CAMERA DE RÉ -->
-            <div class="check_div">
-              <label for="check_camRe">Câmera de ré</label>
-              <input name="opcionais" type="checkbox" id="check_camRe" value="Câmera de ré">
-            </div>
-            <!-- DIREÇÃO ELETRICA -->
-            <div class="check_div">
-              <label for="check_dirEle">Direção elétrica</label>
-              <input name="opcionais" type="checkbox" id="check_dirEle" value="Direção elétrica">
-            </div>
-            <!-- DIREÇÃO HIDRAULICA -->
-            <div class="check_div">
-              <label for="check_dirHidr">Direção hidráulica</label>
-              <input name="opcionais" type="checkbox" id="check_dirHidr" value="Direção hidráulica">
-            </div>
-            <!-- GPS -->
-            <div class="check_div">
-              <label for="check_gps">GPS</label>
-              <input name="opcionais" type="checkbox" id="check_gps" value="GPS">
-            </div>
-            <!-- SEONSOR DE ESTACIONAMENTO -->
-            <div class="check_div">
-              <label for="check_sensorEst">Sensor de estacionamento</label>
-              <input name="opcionais" type="checkbox" id="check_sensorEst" value="Sensor de estacionamento">
-            </div>
-            <!-- TETO SOLAR -->
-            <div class="check_div">
-              <label for="check_tetoSol">Teto solar</label>
-              <input name="opcionais" type="checkbox" id="check_tetoSol" value="Teto solar">
-            </div>
-            <!-- TRAVA ELETRICA -->
-            <div class="check_div">
-              <label for="check_trava_ele">Trava elétrica</label>
-              <input name="opcionais" type="checkbox" id="check_trava_ele" value="Trava elétrica">
-            </div>
-            <!-- VIDRO ELETRICO -->
-            <div class="check_div">
-              <label for="check_vidEle">Vidros elétricos</label>
-              <input name="opcionais" type="checkbox" id="check_vidEle" value="Vidros elétricos">
-            </div>
-          
+          <!-- AR-CONDICIONADO -->
+          <div class="check_div">
+            <label for="check_ar">Ar-condicionado</label>
+            <input name="opcionais" type="checkbox" id="check_ar" value="Ar-condicionado">
+          </div>
+          <!-- CAMERA DE RÉ -->
+          <div class="check_div">
+            <label for="check_camRe">Câmera de ré</label>
+            <input name="opcionais" type="checkbox" id="check_camRe" value="Câmera de ré">
+          </div>
+          <!-- DIREÇÃO ELETRICA -->
+          <div class="check_div">
+            <label for="check_dirEle">Direção elétrica</label>
+            <input name="opcionais" type="checkbox" id="check_dirEle" value="Direção elétrica">
+          </div>
+          <!-- DIREÇÃO HIDRAULICA -->
+          <div class="check_div">
+            <label for="check_dirHidr">Direção hidráulica</label>
+            <input name="opcionais" type="checkbox" id="check_dirHidr" value="Direção hidráulica">
+          </div>
+          <!-- GPS -->
+          <div class="check_div">
+            <label for="check_gps">GPS</label>
+            <input name="opcionais" type="checkbox" id="check_gps" value="GPS">
+          </div>
+          <!-- SEONSOR DE ESTACIONAMENTO -->
+          <div class="check_div">
+            <label for="check_sensorEst">Sensor de estacionamento</label>
+            <input name="opcionais" type="checkbox" id="check_sensorEst" value="Sensor de estacionamento">
+          </div>
+          <!-- TETO SOLAR -->
+          <div class="check_div">
+            <label for="check_tetoSol">Teto solar</label>
+            <input name="opcionais" type="checkbox" id="check_tetoSol" value="Teto solar">
+          </div>
+          <!-- TRAVA ELETRICA -->
+          <div class="check_div">
+            <label for="check_trava_ele">Trava elétrica</label>
+            <input name="opcionais" type="checkbox" id="check_trava_ele" value="Trava elétrica">
+          </div>
+          <!-- VIDRO ELETRICO -->
+          <div class="check_div">
+            <label for="check_vidEle">Vidros elétricos</label>
+            <input name="opcionais" type="checkbox" id="check_vidEle" value="Vidros elétricos">
+          </div>
+
         </div>
         <div class="enviar">
-          <button onclick="cadastroCar()" id="btnEnviar">Finalizar cadastro</button>
+          <button onclick="" type="submit" id="btnEnviar">Finalizar cadastro</button>
         </div>
       </form>
     </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
   <script src="cadastro_car.js"></script>
 
   <script>
 
-    function cadastroCar(){
-      const aluguel =document.getElementById('contrato_aluguel')
-      const compra =document.getElementById('contrato_comprar')
-      let contrato = true
+    const aluguel = document.getElementById('contrato_aluguel')
+    const compra = document.getElementById('contrato_comprar')
+    let contrato = true
 
-      aluguel.addEventListener("change", function() {
-        if (aluguel.checked) {
-          compra.checked = false;
-        }
-      });
+    aluguel.addEventListener("change", function () {
+      if (aluguel.checked) {
+        compra.checked = false;
+      }
+    });
 
-      compra.addEventListener("change", function() {
-        if (compra.checked) {
-          aluguel.checked = false;
-          contrato = false
-        }
-      });
-      
+    compra.addEventListener("change", function () {
+      if (compra.checked) {
+        aluguel.checked = false;
+        contrato = false
+      }
+    });
 
-      document.querySelector("form").addEventListener("submit", (enviar) => {
 
-        const marca = document.getElementById('imput_marca')
-        const modelo = document.getElementById('imput_modelo')
-        const ano = document.getElementById('imput_ano')
-        const placa = document.getElementById('imput_placa')
-        const cor = document.getElementById('imput_cor')
-        const km = document.getElementById('imput_km')
-        const comb = document.getElementById('imput_combustivel')
-        const cambio = document.getElementById('imput_cambio')
-        const valor = document.getElementById('imput_valor')
-        const motor = document.getElementById('imput_motor')
+    document.querySelector("form").addEventListener("submit", async (enviar) => {
+      var valido = true;
 
-        console.log(contrato.value)
+      const marca = document.getElementById('imput_marca')
+      const modelo = document.getElementById('imput_modelo')
+      const ano = document.getElementById('imput_ano')
+      const placa = document.getElementById('imput_placa')
+      const cor = document.getElementById('imput_cor')
+      const km = document.getElementById('imput_km')
+      const comb = document.getElementById('imput_combustivel')
+      const cambio = document.getElementById('imput_cambio')
+      const valor = document.getElementById('imput_valor')
+      const motor = document.getElementById('imput_motor')
 
-        if(!aluguel.checked && !compra.checked){
-          enviar.preventDefault()
-          document.getElementById('invalid_contrato').textContent = " ⚠ Esse campo é obrigatorio. Favor escolher o tipo de contrato"
-        }
-        if(marca.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_marca').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a marca do veículo"
-        }
-        if(modelo.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_modelo').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o modelo do veículo"
-        }
-        if(ano.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_ano').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o ano da produção do veículo"
-        }
-        if(placa.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_placa').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a placa do veículo"
-        }
-        if(cor.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_cor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a cor do veículo"
-        }
-        if(km.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_km').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a kilometragem do veículo"
-        }
-        if(comb.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_comb').textContent = "⚠ Esse campo é obrigatorio. Favor escolher o tipo de combustivel do veículo"
-        }
-        if(cambio.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_cambio').textContent = "⚠ Esse campo é obrigatorio. Favor escolher o tipo de câmbio do veículo"
-        }
-        if(valor.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_valor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o valor do veículo"
-        }
-        if(motor.value ==''){
-          enviar.preventDefault()
-          document.getElementById('invalid_motor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o tipo de motor do veículo"
-        }
-        else{
 
-          enviar.preventDefault()
-          console.log('ola')
+      if (!aluguel.checked && !compra.checked) {
+        enviar.preventDefault()
+        document.getElementById('invalid_contrato').textContent = " ⚠ Esse campo é obrigatorio. Favor escolher o tipo de contrato"
+        valido = false;
+      }
+      if (marca.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_marca').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a marca do veículo"
+        valido = false;
+      }
+      if (modelo.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_modelo').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o modelo do veículo"
+        valido = false;
+      }
+      if (ano.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_ano').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o ano da produção do veículo"
+        valido = false;
+      }
+      if (placa.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_placa').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a placa do veículo"
+        valido = false;
+      }
+      if (cor.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_cor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a cor do veículo"
+        valido = false;
+      }
+      if (km.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_km').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a kilometragem do veículo"
+        valido = false;
+      }
+      if (comb.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_comb').textContent = "⚠ Esse campo é obrigatorio. Favor escolher o tipo de combustivel do veículo"
+        valido = false;
+      }
+      if (cambio.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_cambio').textContent = "⚠ Esse campo é obrigatorio. Favor escolher o tipo de câmbio do veículo"
+        valido = false;
+      }
+      if (valor.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_valor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o valor do veículo"
+        valido = false;
+      }
+      if (motor.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_motor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o tipo de motor do veículo"
+        valido = false;
+      }
 
-          async function postCar(enviar){
-
-              let valorContrato = contrato
-              let marcaValor = marca.value
-              let modeloValor = modelo.value
-              let anoValor = ano.value
-              let placaValor = placa.value
-              let corValor = cor.value
-              let kmValor = km.value
-              let combValor = comb.value
-              let cambioValor = cambio.value
-              let precoValor = valor.value
-              let motorValor = motor.value
-              let dataValor = new Date().toISOString
-              let opcionais = Array.from(document.querySelectorAll('input[name="opcionais"]:checked')).map(el => el.value)
-
-              await fetch('http://localhost:3000/carros',{
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify(
-              {
-                  "alugar": valorContrato,
-                  "marca": marcaValor,
-                  "modelo": modeloValor,
-                  "ano": anoValor,
-                  "placa": placaValor,
-                  "cor": corValor,
-                  "km": kmValor,
-                  "tipoComb": combValor,
-                  "cambio": cambioValor,
-                  "valor": precoValor,
-                  "dataCadastro": dataValor,
-                  "motor": motorValor,
-                  "opcionais": opcionais
-              },
-              ),
-              })
-              .then(res => res.json())
-              .then(data =>{
-                  console.log(data)
-              })
-              
-          }
-        }
-      })
-    }
+      if (valido == true) {
+        postCar(contrato) 
+      }
+    })
 
   </script>
 
 </body>
+
 </html>
