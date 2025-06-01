@@ -1,5 +1,76 @@
-{
+{ 
   "carros": [
-    
-  ]
+    {
+      "id": "6707",
+      "uso": "usado",
+      "alugar": false,
+      "marca": "BMW",
+      "modelo": "X5",
+      "ano": "2019",
+      "placa": "JKL4M56",
+      "cor": "Branco",
+      "km": "78000",
+      "tipoComb": "gasolina",
+      "cambio": "automatico",
+      "valor": "320000",
+      "dataCadastro": "01/06/2025",
+      "motor": "3.0 TwinPower Turbo",
+      "opcionais": [
+        "Tela Multimidia",
+        "Ar-condicionado",
+        "Trava elétrica",
+        "Vidros elétricos",
+        "Banco de couro"
+      ]
+    },
+    {
+      "id": "d010",
+      "uso": "semi-novo",
+      "alugar": true,
+      "marca": "Volkswagen",
+      "modelo": "Gol",
+      "ano": "2020",
+      "placa": "ABC1D23",
+      "cor": "Prata",
+      "km": "10000",
+      "tipoComb": "flex",
+      "cambio": "manual",
+      "valor": "2000",
+      "dataCadastro": "01/06/2025",
+      "motor": "1.0 MPI",
+      "opcionais": [
+        "Ar-condicionado",
+        "GPS",
+        "Sensor de estacionamento",
+        "Trava elétrica",
+        "Vidros elétricos"
+      ]
+    },
+    {
+      "id": "099b",
+      "uso": "novo",
+      "alugar": false,
+      "marca": "Toyota",
+      "modelo": "Corolla",
+      "ano": "2023",
+      "placa": "XYZ9A87",
+      "cor": "Preto",
+      "km": "0",
+      "tipoComb": "hibrido",
+      "cambio": "automatico",
+      "valor": "185000",
+      "dataCadastro": "01/06/2025",
+      "motor": "2.0 Hybrid",
+      "opcionais": [
+        "Tela Multimidia",
+        "Ar-condicionado",
+        "Direção elétrica",
+        "Teto solar",
+        "Trava elétrica",
+        "Vidros elétricos",
+        "Banco de couro"
+      ]
+    }
+  ],
+  "img": []
 }

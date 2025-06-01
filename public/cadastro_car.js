@@ -1,3 +1,4 @@
+
 async function postCar(contrato) {
   
         let valorContrato = contrato
@@ -11,16 +12,18 @@ async function postCar(contrato) {
         let cambioValor = document.getElementById('imput_cambio').value
         let precoValor = document.getElementById('imput_valor').value
         let motorValor = document.getElementById('imput_motor').value
-        let dataValor = new Date().toISOString
+        let dataValor = new Date().toLocaleDateString('pt-BR')
         let opcionais = Array.from(document.querySelectorAll('input[name="opcionais"]:checked')).map(el => el.value)
+        let uso = verificaUso()
 
         await fetch('http://localhost:3000/carros', {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/json; charset=UTF-8',
           },
           body: JSON.stringify(
             {
+              "uso": uso,
               "alugar": valorContrato,
               "marca": marcaValor,
               "modelo": modeloValor,
@@ -41,4 +44,19 @@ async function postCar(contrato) {
           .then(data => {
             console.log(data)
           })
+}
+
+function verificaUso(){
+  let uso =''
+  let km = document.getElementById('imput_km').value
+  if(km==0){
+    uso='novo'
+  }
+  else if(km>0 && km<=20000){
+    uso='semi-novo'
+  }
+  else{
+    uso='usado'
+  }
+  return uso
 }

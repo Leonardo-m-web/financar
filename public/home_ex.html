@@ -15,18 +15,26 @@
     <script>
         const card = document.getElementById('card');
 
-        carro.forEach(item => {
-            const car = document.createElement('div');
-            car.className='link';
-            car.innerHTML = `
-            <div>LINK DE UM CARRO
-            <a href="car.html?id=${item.id}">
-                <p> Carro </p>
-            </a>
-            </div>
-            `;
-            card.appendChild(car);
-        });
+        fetch('http://localhost:3000/carros')
+        .then(res => res.json())
+        .then(data =>{
+            for(let i =0;i<data.length;i++){
+
+                let item = data[i]
+                console.log(data)
+                console.log(item)
+                const car = document.createElement('div');
+                car.className='link';
+                car.innerHTML = `
+                <div>LINK DE UM CARRO
+                <a href="car.html?id=${item.id}">
+                    <p> Carro </p>
+                </a>
+                </div>
+                `;
+                card.appendChild(car);
+        }
+        })
         
     </script>
 </body>

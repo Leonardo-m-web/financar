@@ -98,8 +98,9 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     transition: all 0.3s ease;
 }
 
-.check_div input[type="checkbox"]:checked {
-    background-color: #f28c28;
+.check_div input[type="checkbox"]:disabled {
+    background-color: #fdfdfd;
+    border:  0.5px solid rgb(175, 175, 175);
 }
 
 .check_div input[type="checkbox"]:checked {
@@ -111,12 +112,35 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
     border-color: #4CAF50; 
     transition: all 0.15s ease-in; 
 }
+.up_img{
+    display: flex;
+    justify-content: center;
+}
+.upload{
+    width: 45rem;
+    height: 15rem;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 250ms ease-in-out;
+}
+.upload:hover{
+    background-color: #ccc;
+}
+.upload:hover .quadro{
+    color: #eee;
+}
+.quadro{
+    width: 10rem;
+    color: #bbb;
+    transition: color 200ms ease-in-out;
+}
 
 .enviar{
     display: flex;
     justify-content:center;
 }
-
 #btnEnviar {
     width: 30rem;
     background-color: #f28c28;
