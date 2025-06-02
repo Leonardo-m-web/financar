@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="cadastro_car.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+</head>
+
+<body>
+
+  <nav id="navnresp" class="navbar navbar-expand-lg bg-white">
+    <div class="container">
+      <div class="navbar-brand">
+        <a href="#">
+          <img src="../img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar">
+        </a>
+      </div>
+      <div class="d-flex">
+        <a class="btn btn-light mx-2" href="../detalhes/home_ex">Home</a>
+        <a class="btn btn-light mx-2" href="#">Aluguéis</a>
+        <a class="btn btn-light mx-2" href="#">Ofertas</a>
+      </div>
+    </div>
+  </nav>
+
+  <nav id="navresp" class="navbar bg-body-tertiary fixed-top">
+    <div class="container-fluid">
+      <div class="nb">
+        <a class="navbar-brand" href="#">
+          <img src="../img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../detalhes/home_ex">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Ofertas</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Aluguéis</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="j">
+    <div class="i">
+      <h3 class=""> Cadastre seu veículo</h3>
+      <form id="cadastro_car">
+
+        <!-- TIPO DE CONTRATO -->
+        <div class="tipo_contrato">
+
+          <h5 class="tipo">Tipo de contrato</h5>
+
+          <div class="check_div" id="div_contrato">
+            <label for="">Vender</label>
+            <input type="checkbox" name="contrato" id="contrato_comprar" value=false>
+            <label for="">Alugar</label>
+            <input type="checkbox" name="contrato" id="contrato_aluguel" value=true>
+          </div>
+          <div id="invalid_contrato" class="invalid-feedbac"></div>
+        
+        </div>
+
+        <div class="escrito">
+
+          <h5 class="tipo">Informações iniciais</h5>
+
+          <!-- MARCA -->
+          <div class="mb-3">
+            <label for="imput_marca" class="label">Marca</label>
+            <input type="text" class="imput" id="imput_marca" placeholder="Insira a marca">
+            <div id="invalid_marca" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- MODELO -->
+          <div class="mb-3">
+            <label for="imput_modelo" class="label">Modelo</label>
+            <input type="text" class="imput" id="imput_modelo" placeholder="Insira o modelo">
+            <div id="invalid_modelo" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- ANO -->
+          <div class="mb-3">
+            <label for="imput_ano" class="label">Ano</label>
+            <input type="number" class="imput" id="imput_ano" placeholder="Insira o ano">
+            <div id="invalid_ano" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- PLACA-->
+          <div class="mb-3">
+            <label for="imput_placa" class="label">Placa</label>
+            <input type="text" class="imput" id="imput_placa" placeholder="Insira a placa">
+            <div id="invalid_placa" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- COR -->
+          <div class="mb-3">
+            <label for="imput_cor" class="label">Cor</label>
+            <input type="text" class="imput" id="imput_cor" placeholder="Insira a cor">
+            <div id="invalid_cor" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- KM -->
+          <div class="mb-3">
+            <label for="imput_km" class="label">Kilometragem</label>
+            <input type="number" class="imput" id="imput_km" placeholder="Insira a kilometragem">
+            <div id="invalid_km" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- COMBUSTIVEL-->
+          <div class="mb-3">
+            <label for="imput_combustivel" class="label">Combustivel</label>
+            <select id="imput_combustivel" class="imput" name="combustivel">
+              <option class="place_holder" value="" selected disabled> Escolher </option>
+              <option value="diesel">Diesel</option>
+              <option value="etanol">Etanol</option>
+              <option value="gasolina">Gasolina</option>
+              <option value="GNV">GNV</option>
+              <option value="elétrico">Elétrico</option>
+              <option value="flex">Flex</option>
+              <option value="hibrido">Híbrido</option>
+            </select>
+            <div id="invalid_comb" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- CAMBIO-->
+          <div class="mb-3">
+            <label for="imput_cambio" class="label">Cambio</label>
+            <select id="imput_cambio" class="imput" name="cambio">
+              <option class="place_holder" value="" selected disabled> Escolher </option>
+              <option value="manual">Manual</option>
+              <option value="automatico">Automático</option>
+              <option value="automatizado">Automatizado</option>
+              <option value="CVT">CVT</option>
+            </select>
+            <div id="invalid_cambio" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- VALOR -->
+          <div class="mb-3">
+            <label for="imput_valor" class="label">Valor</label>
+            <input type="number" class="imput" id="imput_valor" placeholder="Insira o valor do veículo">
+            <div id="invalid_valor" class="invalid-feedbac"></div>
+          </div>
+
+          <!-- MOTOR -->
+          <div class="mb-3">
+            <label for="imput_motor" class="label">Motor</label>
+            <input type="text" class="imput" id="imput_motor" placeholder="Insira o motor">
+            <div id="invalid_motor" class="invalid-feedbac"></div>
+          </div>
+
+        </div>
+
+        <div class="opcionais">
+
+          <h5 class="tipo">Informações opcionais</h5>
+
+          <div class="check_div">
+            <label for="check_tela_MM">Tela Multimídia</label>
+            <input name="opcionais" type="checkbox" id="check_tela_MM" value="Tela Multimidia">
+          </div>
+          <!-- AR-CONDICIONADO -->
+          <div class="check_div">
+            <label for="check_ar">Ar-condicionado</label>
+            <input name="opcionais" type="checkbox" id="check_ar" value="Ar-condicionado">
+          </div>
+
+          <!-- CAMERA DE RÉ -->
+          <div class="check_div">
+            <label for="check_camRe">Câmera de ré</label>
+            <input name="opcionais" type="checkbox" id="check_camRe" value="Câmera de ré">
+          </div>
+
+          <!-- DIREÇÃO ELETRICA -->
+          <div class="check_div">
+            <label for="check_dirEle">Direção elétrica</label>
+            <input name="opcionais" type="checkbox" id="check_dirEle" value="Direção elétrica">
+          </div>
+
+          <!-- DIREÇÃO HIDRAULICA -->
+          <div class="check_div">
+            <label for="check_dirHidr">Direção hidráulica</label>
+            <input name="opcionais" type="checkbox" id="check_dirHidr" value="Direção hidráulica">
+          </div>
+
+          <!-- GPS -->
+          <div class="check_div">
+            <label for="check_gps">GPS</label>
+            <input name="opcionais" type="checkbox" id="check_gps" value="GPS">
+          </div>
+
+          <!-- SEONSOR DE ESTACIONAMENTO -->
+          <div class="check_div">
+            <label for="check_sensorEst">Sensor de estacionamento</label>
+            <input name="opcionais" type="checkbox" id="check_sensorEst" value="Sensor de estacionamento">
+          </div>
+
+          <!-- TETO SOLAR -->
+          <div class="check_div">
+            <label for="check_tetoSol">Teto solar</label>
+            <input name="opcionais" type="checkbox" id="check_tetoSol" value="Teto solar">
+          </div>
+
+          <!-- TRAVA ELETRICA -->
+          <div class="check_div">
+            <label for="check_trava_ele">Trava elétrica</label>
+            <input name="opcionais" type="checkbox" id="check_trava_ele" value="Trava elétrica">
+          </div>
+
+          <!-- VIDRO ELETRICO -->
+          <div class="check_div">
+            <label for="check_vidEle">Vidros elétricos</label>
+            <input name="opcionais" type="checkbox" id="check_vidEle" value="Vidros elétricos">
+          </div>
+
+          <div class="check_div">
+            <label for="check_couro">Banco de couro</label>
+            <input name="opcionais" type="checkbox" id="check_couro" value="Banco de couro">
+          </div>
+
+          <div class="check_div">
+            <label for="check_pilAuto">Piloto Automático</label>
+            <input name="opcionais" type="checkbox" id="check_pilAuto" value="Piloto Automático">
+          </div>
+
+        </div>
+
+        <!-- BOTÃO ENVIAR -->
+        <div class="enviar">
+          <button onclick="" type="submit" id="btnEnviar">Finalizar cadastro</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+    crossorigin="anonymous"></script>
+  <script src="cadastro_car.js"></script>
+
+  <script>
+
+    const aluguel = document.getElementById('contrato_aluguel')
+    const compra = document.getElementById('contrato_comprar')
+    const MM = document.getElementById('check_tela_MM')
+    let contrato = true
+
+    aluguel.addEventListener("change", function () {
+      if (aluguel.checked) {
+        compra.checked = false;
+        contrato = true
+      }
+    });
+
+    compra.addEventListener("change", function () {
+      if (compra.checked) {
+        aluguel.checked = false;
+        contrato = false
+      }
+    });
+
+    MM.addEventListener("change", function(){
+      if(MM.checked){
+        document.getElementById('check_gps').disabled=true
+        document.getElementById('check_sensorEst').disabled=true
+        document.getElementById('check_camRe').disabled=true
+      }
+      else if(!MM.checked){
+        document.getElementById('check_gps').disabled=false
+        document.getElementById('check_sensorEst').disabled=false
+        document.getElementById('check_camRe').disabled=false
+      }
+    })
+
+
+    document.querySelector("form").addEventListener("submit", async (enviar) => {
+
+       var valido = true
+
+      const marca = document.getElementById('imput_marca')
+      const modelo = document.getElementById('imput_modelo')
+      const ano = document.getElementById('imput_ano')
+      const placa = document.getElementById('imput_placa')
+      const cor = document.getElementById('imput_cor')
+      const km = document.getElementById('imput_km')
+      const comb = document.getElementById('imput_combustivel')
+      const cambio = document.getElementById('imput_cambio')
+      const valor = document.getElementById('imput_valor')
+      const motor = document.getElementById('imput_motor')
+
+
+      if (!aluguel.checked && !compra.checked) {
+        enviar.preventDefault()
+        document.getElementById('invalid_contrato').textContent = " ⚠ Esse campo é obrigatorio. Favor escolher o tipo de contrato"
+        valido = false;
+      }
+      if (marca.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_marca').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a marca do veículo"
+        valido = false;
+      }
+      if (modelo.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_modelo').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o modelo do veículo"
+        valido = false;
+      }
+      if (ano.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_ano').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o ano da produção do veículo"
+        valido = false;
+      }
+      if (placa.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_placa').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a placa do veículo"
+        valido = false;
+      }
+      if (cor.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_cor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a cor do veículo"
+        valido = false;
+      }
+      if (km.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_km').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a kilometragem do veículo"
+        valido = false;
+      }
+      if (comb.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_comb').textContent = "⚠ Esse campo é obrigatorio. Favor escolher o tipo de combustivel do veículo"
+        valido = false;
+      }
+      if (cambio.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_cambio').textContent = "⚠ Esse campo é obrigatorio. Favor escolher o tipo de câmbio do veículo"
+        valido = false;
+      }
+      if (valor.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_valor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o valor do veículo"
+        valido = false;
+      }
+      if (motor.value == '') {
+        enviar.preventDefault()
+        document.getElementById('invalid_motor').textContent = "⚠ Esse campo é obrigatorio. Favor inserir o tipo de motor do veículo"
+        valido = false;
+      }
+
+      if (valido == true) {
+        postCar(contrato) 
+      }
+    })
+  </script>
+
+</body>
+
+</html>

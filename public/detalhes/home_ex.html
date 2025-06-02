@@ -11,6 +11,8 @@
     <h5><br>OBS : os dados de cada item são ficcionais e não devem ser levados a sério. Eles estão apenas ali para exemplificar onde cada dado fica na página</h5>
     <div id="card"></div>
 
+    <h3><a href="../cadastro/cadastro_car.html">Cadastrar</a></h3>
+
     <script src="car.js"></script>
     <script>
         const card = document.getElementById('card');
@@ -28,7 +30,7 @@
                 car.innerHTML = `
                 <div>LINK DE UM CARRO
                 <a href="car.html?id=${item.id}">
-                    <p> Carro </p>
+                    <p> ${item.marca} ${item.modelo} </p>
                 </a>
                 </div>
                 `;
