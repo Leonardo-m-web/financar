@@ -75,6 +75,57 @@ a{
     background-color: rgb(1, 122, 1);
     color: white;
 }
+#verificaAl{
+    background-color: rgb(161, 161, 161);
+    padding: 0px;
+}
+.aluguel_coment{
+    height: auto;
+    max-height: 25rem;
+
+}
+.comentTitulo{
+    background-color: aliceblue;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    padding: .2rem;
+}
+.coment_read{
+    height: auto;
+    min-height: 7.5rem;
+    max-height: 15rem;
+    border: 1px solid black;
+    margin: .5rem;
+    overflow-y: auto;
+}
+.coment_post{
+    display: flex;
+    padding: .2rem 1rem .5rem 1rem;
+}
+#imputComent{
+    width: 19rem;
+    padding: .2rem .4em;
+    border-radius: .3rem;
+    margin: .5rem 1rem .5rem .5rem;
+    height: auto;
+    max-height: 5rem;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid black;
+    overflow-y: auto;
+    
+}
+#btnComentPost{
+    border: 0px;
+    background-color: rgba(250, 235, 215, 0);
+}
+#btnComentPost img{
+    width: 1.7rem;
+}
+
 .dados{
     height: auto;
     margin: 1rem;
@@ -214,9 +265,7 @@ h5{
 #verificaAlRes{
     display: none;
 }
-#verificaAl{
-    background-color: blue;
-}
+
 @media(max-width: 768px){
     
     *{
