@@ -73,6 +73,25 @@
     }
   ],
   "comentario": [
-
+    {
+      "id": "b304",
+      "idcar": "d010",
+      "userId": 1
+    },
+    {
+      "id": "e9b2",
+      "idcar": "d010",
+      "userId": 1
+    },
+    {
+      "id": "d262",
+      "idcar": "d010",
+      "userId": 1
+    },
+    {
+      "id": "1d52",
+      "idcar": "d010",
+      "userId": 1
+    }
   ]
 }

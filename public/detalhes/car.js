@@ -1,16 +1,16 @@
 
-    async function carregaDadosDetalhes(id) {
+    async function carregaDadosDetalhes() {
 
       const financeiro = document.getElementById('financeiro')
       const tipo = document.getElementById('tipo')
       const info_sobre = document.getElementById('info_sobre')
       const carrosel = document.getElementById('carrosel')
-      
-      fetch(`http://localhost:3000/carros/${id}`)
+
+      fetch(`http://localhost:3000/carros?id=${id}`)
       .then(res=>res.json())
       .then(data=>{
-        
-        let car=data
+
+        let car=data[0]
 
         if(car.alugar!=true){
           
@@ -100,8 +100,8 @@
       })
 
     }
-    async function deletaDadosDetalhes(id) {
-      fetch(`http://localhost:3000/carros/${id}`, {
+    async function deletaDadosDetalhes() {
+      fetch(`http://localhost:3000/carros?id=${id}`, {
         method: "DELETE",
         headers: {
           'Content-Type': 'application/json',

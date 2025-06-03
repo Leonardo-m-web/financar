@@ -96,7 +96,7 @@ a{
 .coment_read{
     height: auto;
     min-height: 7.5rem;
-    max-height: 15rem;
+    max-height: 20rem;
     border: 1px solid black;
     margin: .5rem;
     overflow-y: auto;
@@ -124,6 +124,50 @@ a{
 }
 #btnComentPost img{
     width: 1.7rem;
+}
+.cm{
+    background-color: white;
+    border-radius: .4rem;
+    margin: .5rem;
+    padding: .3rem;
+}
+.comentHeader{
+
+}
+.comentUser{
+
+}
+.btnComent{
+    right: 0%;
+}
+#btnComentUp{
+    width: 1.1rem;
+    border: 0px;
+    transition: all 200ms ease-in;
+    border-radius: .3rem;
+    text-align: center;
+    text-justify: center;
+    background-color: white;
+}
+#btnComentUp:hover{
+    background-color: rgb(255, 153, 0);
+    color:white;
+}
+#btnComentDel{
+    width: 1.1rem;
+    border: 0px;
+    transition: all 200ms ease-in;
+    border-radius: .3rem;
+    text-align: center;
+    text-justify: center;
+    background-color: white;
+}
+#btnComentDel:hover{
+    background-color: rgb(255, 0, 0);
+    color: rgb(228, 228, 228);
+}
+.coment{
+
 }
 
 .dados{
