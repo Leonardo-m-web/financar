@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,21 @@
 </head>
 
 <body>
-
+  <div id="menuRes">
+    <div class="menu">
+      <div class="btnClose">
+        <button onclick="fechaMenu()" id="btnClose">
+          ✕
+        </button>
+      </div>
+      <div class="d-block">
+        <a class="btn btn-light my-2" href="../detalhes/home_ex.html">Home</a>
+        <a class="btn btn-light my-2" href="#">Aluguéis</a>
+        <a class="btn btn-light my-2" href="#">Ofertas</a>
+      </div>
+    </div>
+  </div>
+  <!--CABEÇALHO DESKTOP-->
   <nav id="navnresp" class="navbar navbar-expand-lg bg-white">
     <div class="container">
       <div class="navbar-brand">
@@ -20,47 +34,30 @@
         </a>
       </div>
       <div class="d-flex">
-        <a class="btn btn-light mx-2" href="../detalhes/home_ex">Home</a>
+        <a class="btn btn-light mx-2" href="../detalhes/home_ex.html">Home</a>
         <a class="btn btn-light mx-2" href="#">Aluguéis</a>
         <a class="btn btn-light mx-2" href="#">Ofertas</a>
       </div>
     </div>
   </nav>
 
+  <!--CABEÇALHO MOBILE-->
   <nav id="navresp" class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
+
       <div class="nb">
         <a class="navbar-brand" href="#">
           <img src="../img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <button onclick="abreMenu()" class="navbar-toggler" type="button" >
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../detalhes/home_ex">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ofertas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Aluguéis</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    
     </div>
   </nav>
 
-
+  <!--AREA PRINCIPAL CONTENDO O FORMULARIO DE CADASTRO-->
   <div class="j">
     <div class="i">
       <h3 class=""> Cadastre seu veículo</h3>
@@ -81,6 +78,7 @@
         
         </div>
 
+        <!-- SEÇÃO DE INFORMAÇÕES PRINCIPAIS- INICIO -->
         <div class="escrito">
 
           <h5 class="tipo">Informações iniciais</h5>
@@ -109,7 +107,7 @@
           <!-- PLACA-->
           <div class="mb-3">
             <label for="imput_placa" class="label">Placa</label>
-            <input type="text" class="imput" id="imput_placa" placeholder="Insira a placa">
+            <input maxlength="7" type="text" class="imput" id="imput_placa" placeholder="Insira a placa">
             <div id="invalid_placa" class="invalid-feedbac"></div>
           </div>
 
@@ -158,7 +156,7 @@
 
           <!-- VALOR -->
           <div class="mb-3">
-            <label for="imput_valor" class="label">Valor</label>
+            <label for="imput_valor" class="label">Valor <span class="RS"> (R$)</span></label>
             <input type="number" class="imput" id="imput_valor" placeholder="Insira o valor do veículo">
             <div id="invalid_valor" class="invalid-feedbac"></div>
           </div>
@@ -171,15 +169,19 @@
           </div>
 
         </div>
+        <!-- SEÇÃO DE INFORMAÇÕES PRINCIPAIS- FIM -->
 
+        <!-- SEÇÃO DE ITENS ADICIONAIS - INICIO -->
         <div class="opcionais">
 
           <h5 class="tipo">Informações opcionais</h5>
 
+          <!-- TELA MULTIMIDIA -->
           <div class="check_div">
             <label for="check_tela_MM">Tela Multimídia</label>
             <input name="opcionais" type="checkbox" id="check_tela_MM" value="Tela Multimidia">
           </div>
+
           <!-- AR-CONDICIONADO -->
           <div class="check_div">
             <label for="check_ar">Ar-condicionado</label>
@@ -233,18 +235,21 @@
             <label for="check_vidEle">Vidros elétricos</label>
             <input name="opcionais" type="checkbox" id="check_vidEle" value="Vidros elétricos">
           </div>
-
+          
+          <!-- BANCO DE COURO -->
           <div class="check_div">
             <label for="check_couro">Banco de couro</label>
             <input name="opcionais" type="checkbox" id="check_couro" value="Banco de couro">
           </div>
 
+          <!-- PILOTO AUTOMÁTICO -->
           <div class="check_div">
             <label for="check_pilAuto">Piloto Automático</label>
             <input name="opcionais" type="checkbox" id="check_pilAuto" value="Piloto Automático">
           </div>
 
         </div>
+        <!-- SEÇÃO DE ITENS ADICIONAIS - FIM -->
 
         <!-- BOTÃO ENVIAR -->
         <div class="enviar">
@@ -254,7 +259,7 @@
       </form>
     </div>
   </div>
-
+  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
     crossorigin="anonymous"></script>
@@ -267,13 +272,16 @@
     const MM = document.getElementById('check_tela_MM')
     let contrato = true
 
+    //SE O CHECKBOX COM A INFORMAÇÃO ALUGUEL ESTIVER COMO TRUE
+    //O CHECKBOX COM A INFORMAÇÃO FINANCIAMENTO SERÁ TROCADA PRA FALSE
     aluguel.addEventListener("change", function () {
       if (aluguel.checked) {
         compra.checked = false;
         contrato = true
       }
     });
-
+    //SE O CHECKBOX COM A INFORMAÇÃO FINANCIAMENTO ESTIVER COMO TRUE
+    //O CHECKBOX COM A INFORMAÇÃO ALUGUEL SERÁ TROCADA PRA FALSE
     compra.addEventListener("change", function () {
       if (compra.checked) {
         aluguel.checked = false;
@@ -281,6 +289,7 @@
       }
     });
 
+    //AO CLICAR NO CHECK BOX MULTIMIDIA DESABILITA OS CHECKBOXES GPS SENSOR DE EST E CAMERA DE RÉ
     MM.addEventListener("change", function(){
       if(MM.checked){
         document.getElementById('check_gps').disabled=true
@@ -294,28 +303,33 @@
       }
     })
 
-
+    //QUANDO O BOTÃO DE SUBMIT FOR CLICADO
     document.querySelector("form").addEventListener("submit", async (enviar) => {
+      
+      //CRIA A VARIAVEL VALIDO PARA SERVIR COMO PARAMETRO
+      var valido = true
 
-       var valido = true
-
+      //PEGA OS CHECKBOXES OBRIGATORIOS
       const marca = document.getElementById('imput_marca')
       const modelo = document.getElementById('imput_modelo')
       const ano = document.getElementById('imput_ano')
-      const placa = document.getElementById('imput_placa')
       const cor = document.getElementById('imput_cor')
+      const placa = document.getElementById('imput_placa')
       const km = document.getElementById('imput_km')
       const comb = document.getElementById('imput_combustivel')
       const cambio = document.getElementById('imput_cambio')
       const valor = document.getElementById('imput_valor')
       const motor = document.getElementById('imput_motor')
 
-
+      //SE OS DOIS CHECKBOXES DE CONTRATO ESTIVEREM DESMARCADOS UMA MENSAGEM IRA APARECER, 
+      //O VALOR DA VARIAVEL VALIDO SERÁ MUDADO PRA FALSE E O EVENTO DE ENVIAR SERÁ BLOQUEADO
       if (!aluguel.checked && !compra.checked) {
         enviar.preventDefault()
         document.getElementById('invalid_contrato').textContent = " ⚠ Esse campo é obrigatorio. Favor escolher o tipo de contrato"
         valido = false;
       }
+      //SE QUALQUER UM DOS CHECKBOXES OBRIGATORIOS ESTIVEREM DESMARCADOS UMA MENSAGEM IRA APARECER, 
+      //O VALOR DA VARIAVEL VALIDO SERÁ MUDADO PRA FALSE E O EVENTO DE ENVIAR SERÁ BLOQUEADO
       if (marca.value == '') {
         enviar.preventDefault()
         document.getElementById('invalid_marca').textContent = "⚠ Esse campo é obrigatorio. Favor inserir a marca do veículo"
@@ -367,10 +381,29 @@
         valido = false;
       }
 
+      //VERIFICA SE A PLCA JA FOI CADASTRADA
+      fetch('http://localhost:3000/carros')
+      .then(res=>res.json())
+      .then(data=>{
+        
+        for(let i =0; i<data.length;i++){
+          
+          dado=data[i]
+
+          if(placa.value == dado.placa){
+            enviar.preventDefault()
+            document.getElementById('invalid_placa').textContent = "⚠ O numero de placa digitado ja foi cadastrado"
+            valido = false;
+          }
+        }
+      })
+
+      //SE DEPOIS DA VERIFICAÇÃO A VARIAVEL VALIDO AINDA ESTIVER COM O VALOR TRUE A FUNÇÃO SERÁ CHAMADA
       if (valido == true) {
         postCar(contrato) 
       }
     })
+
   </script>
 
 </body>

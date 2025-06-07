@@ -70,27 +70,39 @@
         "Vidros elétricos",
         "Banco de couro"
       ]
+    },
+    {
+      "uso": "usado",
+      "alugar": true,
+      "marca": "ddd",
+      "modelo": "crossfox",
+      "ano": "2013",
+      "placa": "ggfhhd",
+      "cor": "prata",
+      "km": "100000",
+      "tipoComb": "flex",
+      "cambio": "manual",
+      "valor": "3000",
+      "dataCadastro": "04/06/2025",
+      "motor": "1.0",
+      "opcionais": [
+        "Banco de couro",
+        "Piloto Automático"
+      ],
+      "id": "cfc4"
     }
   ],
   "comentario": [
     {
-      "id": "b304",
+      "id": "04c1",
       "idcar": "d010",
+      "coment": "ola blz",
       "userId": 1
     },
     {
-      "id": "e9b2",
-      "idcar": "d010",
-      "userId": 1
-    },
-    {
-      "id": "d262",
-      "idcar": "d010",
-      "userId": 1
-    },
-    {
-      "id": "1d52",
-      "idcar": "d010",
+      "id": "de1d",
+      "idcar": "cfc4",
+      "coment": "ola",
       "userId": 1
     }
   ]

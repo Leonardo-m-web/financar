@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="pt-BR">
 
 <head>
   <meta charset="UTF-8">
@@ -11,6 +11,21 @@
 </head>
 
 <body>
+
+  <div id="menuRes" class="d-none">
+    <div class="menu">
+      <div class="btnClose">
+        <button onclick="fechaMenu()" id="btnClose">
+          ✕
+        </button>
+      </div>
+      <div class="d-block">
+        <a class="btn btn-light my-2" href="../detalhes/home_ex.html">Home</a>
+        <a class="btn btn-light my-2" href="#">Aluguéis</a>
+        <a class="btn btn-light my-2" href="#">Ofertas</a>
+      </div>
+    </div>
+  </div>
 
   <nav id="navnresp" class="navbar navbar-expand-lg bg-white">
     <div class="container">
@@ -27,36 +42,19 @@
     </div>
   </nav>
 
+  <!--CABEÇALHO MOBILE-->
   <nav id="navresp" class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
+
       <div class="nb">
         <a class="navbar-brand" href="#">
           <img src="../img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-          aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <button onclick="abreMenu()" class="navbar-toggler" type="button" >
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-        </div>
-        <div class="offcanvas-body">
-          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="../detalhes/home_ex.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Ofertas</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Aluguéis</a>
-            </li>
-          </ul>
-        </div>
-      </div>
+    
     </div>
   </nav>
 
@@ -109,7 +107,7 @@
           <!-- PLACA-->
           <div class="mb-3">
             <label for="imput_placa" class="label">Placa</label>
-            <input type="text" class="imput" id="imput_placa" placeholder="Insira a placa">
+            <input maxlength="7" type="text" class="imput" id="imput_placa" placeholder="Insira a placa">
             <div id="invalid_placa" class="invalid-feedbac"></div>
           </div>
 
@@ -262,7 +260,7 @@
 
   <script>
     
-    atualizaDadosDetalhes()
+    carregaDadosPUT()
     const aluguel = document.getElementById('contrato_aluguel')
     const compra = document.getElementById('contrato_comprar')
     const MM = document.getElementById('check_tela_MM')
@@ -369,7 +367,7 @@
       }
 
       if (valido == true) {
-        postCar(contrato) 
+        atualizaDados()
       }
     })
   </script>

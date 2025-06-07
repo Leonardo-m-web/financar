@@ -18,6 +18,9 @@ a{
 .im_logo{
     height: 4.5rem !important;
 }
+#menuRes{
+    display: none;
+}
 .i{
     display: flex;
     justify-content: center;
@@ -76,22 +79,27 @@ a{
     color: white;
 }
 #verificaAl{
-    background-color: rgb(161, 161, 161);
+    
     padding: 0px;
+    margin: 1rem;
 }
 .aluguel_coment{
-    height: auto;
-    max-height: 25rem;
 
+    height: auto;
+    max-height: 30rem;
 }
 .comentTitulo{
-    background-color: aliceblue;
+    background-color: rgb(221, 84, 20);
+    color: rgb(245, 245, 245);
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: sans-serif;
     padding: .2rem;
+    margin: .1rem;
+    margin-bottom: 1rem;
+    border-radius: .3rem;
 }
 .coment_read{
     height: auto;
@@ -100,12 +108,14 @@ a{
     border: 1px solid black;
     margin: .5rem;
     overflow-y: auto;
+    border-radius: .5rem;
+    background-color: rgb(165, 165, 165);
 }
 .coment_post{
     display: flex;
     padding: .2rem 1rem .5rem 1rem;
 }
-#imputComent{
+.imputComent{
     width: 19rem;
     padding: .2rem .4em;
     border-radius: .3rem;
@@ -120,11 +130,32 @@ a{
 }
 #btnComentPost{
     border: 0px;
-    background-color: rgba(250, 235, 215, 0);
+    background-color: rgb(228, 228, 228) !important;
 }
+#btnComentPostRes{
+    border: 0px;
+    background-color: rgb(228, 228, 228) !important;
+}
+
 #btnComentPost img{
     width: 1.7rem;
 }
+#btnComentUpdate{
+    border: 0px;
+    background-color: rgb(161, 161, 161);
+}
+#btnComentUpdate img{
+    width: 1.7rem;
+}
+#btnComentUpdateRes{
+    border: 0px;
+    background-color: rgb(228, 228, 228) !important;
+}
+#btnComentUpdateRes img{
+    width: 1.7rem;
+}
+
+
 .cm{
     background-color: white;
     border-radius: .4rem;
@@ -140,7 +171,7 @@ a{
 .btnComent{
     right: 0%;
 }
-#btnComentUp{
+.btnComentUp{
     width: 1.1rem;
     border: 0px;
     transition: all 200ms ease-in;
@@ -149,11 +180,11 @@ a{
     text-justify: center;
     background-color: white;
 }
-#btnComentUp:hover{
+.btnComentUp:hover{
     background-color: rgb(255, 153, 0);
     color:white;
 }
-#btnComentDel{
+.btnComentDel{
     width: 1.1rem;
     border: 0px;
     transition: all 200ms ease-in;
@@ -162,7 +193,7 @@ a{
     text-justify: center;
     background-color: white;
 }
-#btnComentDel:hover{
+.btnComentDel:hover{
     background-color: rgb(255, 0, 0);
     color: rgb(228, 228, 228);
 }
@@ -230,6 +261,8 @@ h5{
 }
 #btnU{
     background-color: blue;
+    display: flex;
+    justify-content: center;
 }
 #divDel{
     width: 100%;
@@ -325,15 +358,49 @@ h5{
         display: flex !important;
     }
     .im_logo{
-        
         width: 5rem;
     }
     .navbar-toggler{
         width: 5rem !important;
         height: 4rem !important;
     }
+    #menuRes{
+        display: flex;
+        position: fixed;
+        z-index: 9999999;
+        width: 100%;
+        height: 100%;
+        background-color: #bbbb;
+        flex-direction: row;
+        transition: all 400ms x;
+        justify-content: center;
+        align-items: start;
+        padding-top: 7rem;
+    }
+    .menu{
+        width: 80%;
+        background-color: white;
+        border-radius: .4rem;
+        padding: .5rem;
+        border: 1px solid black;
+    }
+    .btnClose{
+        display: flex;
+        justify-content: end;
+    }
+    #btnClose{
+        border: 0px;
+        width: auto;
+        padding: .1rem;
+        font-size: 150%;
+        background-color: white;
+        margin: .5rem .6rem;
+    }
+    .crud{
+        margin-top: 6rem;
+    }
     .i{
-        margin-top: 7rem;
+        margin-top: .1rem;
     }
     .container{
         display: block;
@@ -364,13 +431,50 @@ h5{
         font-size: 16px;
         text-justify: center;
     }
+    #divdel{
+        align-items: start;
+    }
     .divdel{
         width: 90%;
-    }
-    #verificaAlRes{
-        display: block;
     }
     #verificaAl{
         display: none;
     }
+    #verificaAlRes{
+        display: block;
+        width: 100%;
+    }
+    .imputComent{
+        margin: .5rem ;
+        width: 30rem;
+    }
+    .comentTitulo{
+        width: 100%;
+    }
+    .coment_post{
+        
+    }
+    #btnComentPost{
+        width: 5rem;
+
+    }
+    #btnComentPostRes img{
+        width: 2rem;
+    }
+    #btnComentPostRes{
+        width: 5rem;
+        border: 0px;
+    }
+    #btnComentUpdateRes{
+        width: 5rem;
+    }
+
+    .coment_read{
+        width: auto;
+        max-height: 55rem;
+    }
+    .cm{
+        width: auto;
+    }
+    
 }

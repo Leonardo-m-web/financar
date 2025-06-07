@@ -17,6 +17,9 @@ body{
 #navnresp{
     display: flex;
 }
+#menuRes{
+    display: none;
+}
 .j{
     width: 100%;
     display: flex;
@@ -43,6 +46,10 @@ h5{
     display: flex;
     flex-wrap: wrap;
     padding: .5rem;
+}
+.RS{
+    font-size: 90%;
+    color: rgba(0, 0, 0, 0.822);
 }
 .check_div{
     display: flex;
@@ -159,12 +166,16 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
 }
 
 @media (max-width: 768px){
+    *{
+        width: 100%;
+    }
     #navnresp{
         display: none;
     }
     #navresp{
-        display: flex !important;
+        display: block !important;
         border-bottom: 1px solid rgb(153, 153, 153);
+        width: 100% !important;
     }
     .nb{
         display: flex !important;
@@ -176,8 +187,41 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         width: 5rem !important;
         height: 4rem !important;
     }
+    #menuRes{
+        display: flex;
+        position: fixed;
+        z-index: 9999999;
+        width: 100%;
+        height: 100%;
+        background-color: #bbbb;
+        flex-direction: row;
+        transition: all 400ms x;
+        justify-content: center;
+        align-items: start;
+        padding-top: 7rem;
+    }
+    .menu{
+        width: 80%;
+        background-color: white;
+        border-radius: .4rem;
+        padding: .5rem;
+        border: 1px solid black;
+    }
+    .btnClose{
+        display: flex;
+        justify-content: end;
+    }
+    #btnClose{
+        border: 0px;
+        width: auto;
+        padding: .1rem;
+        font-size: 150%;
+        background-color: white;
+        margin: .5rem .6rem;
+    }
     .i{
         width: 100%;
+
         margin-top: 6.5rem;
     }
 }

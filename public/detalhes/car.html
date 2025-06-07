@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,22 @@
 </head>
 <body id="body">
 
+  <div id="menuRes" class="d-none">
+    <div class="menu">
+      <div class="btnClose">
+        <button onclick="fechaMenu()" id="btnClose">
+          ✕
+        </button>
+      </div>
+      <div class="d-block">
+        <a class="btn btn-light my-2" href="../detalhes/home_ex.html">Home</a>
+        <a class="btn btn-light my-2" href="#">Aluguéis</a>
+        <a class="btn btn-light my-2" href="#">Ofertas</a>
+      </div>
+    </div>
+  </div>
 
+  <!--PAINEL DE AVISO AO TENTAR DELETAR OS DADOS DO VEICULO-->
   <div id="divDel">
     <div class="divdel">
       <div class="divdelt">
@@ -23,7 +38,7 @@
     </div>
   </div>
 
-
+  <!--CABEÇALHO DESKTOP-->
   <nav id="navnresp" class="navbar navbar-expand-lg bg-white">
         <div class="container">
             <a clas="navbar-brand" href="#">
@@ -37,48 +52,33 @@
         </div>
   </nav>
 
-
+  <!--CABEÇALHO MOBILE-->
   <nav id="navresp" class="navbar bg-body-tertiary fixed-top">
     <div class="container-fluid">
+
       <div class="nb">
         <a class="navbar-brand" href="#">
-          <img src="../img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar" >
+          <img src="../img/logo_finanCar_sem fundo.png" class="im_logo" alt="Logo FinanCar">
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+        <button onclick="abreMenu()" class="navbar-toggler" type="button" >
           <span class="navbar-toggler-icon"></span>
         </button>
       </div>
-        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-          <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="home_ex.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Aluguéis</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    
     </div>
   </nav>
 
+  <!--PAINEL DE BOTOES DE UPDATE E DELETE-->
   <div class="crud">
     <button type="button" id="btnD" class="btnCRUD">
       Excluir
     </button>
-    <button type="button" id="btnU" class="btnCRUD">
+    <a href="" id="btnU" class="btnCRUD">
       Editar
-    </button>
+    </a>
   </div>
 
+  <!--CARROSSEL DE IMAGENS DO VEÍCULO-->
   <div class="i"> 
     <div class="foto_carro">
       <div id="carouselExample" class="carousel slide">
@@ -116,11 +116,16 @@
     </div>
   </div> 
 
+  <!--PARTE DE DETALHES - INICIO-->
   <div class="container">
+
+      <!--PARTE LATERAL - INICIO-->
       <div class="lateral">
         
+        <!--PAINEL DE PREÇO E BOTÃO DE FINANCIAMENTO-->
         <div class="financeiro" id="financeiro"></div>
 
+        <!-- PAINEL DE COMENTRARIOS DESKTOP-->
         <div id="verificaAl">
           <div class="aluguel_coment">
             <div class="comentTitulo">
@@ -130,16 +135,23 @@
 
             </div>
             <div id="coment_post" class="coment_post">
-              <textarea rows="2" id="imputComent" type="text" placeholder="Comentar"></textarea>
-              <button id="btnComentPost">
+              <textarea class="imputComent" rows="2" id="imputComent" type="text" placeholder="Comentar" value="comentar"></textarea>
+              <button class="btnComentPost" id="btnComentPost">
                 <img src="../img/enviar.png" alt="enviar">
               </button>
+              <button class="btnComentPost" id="btnComentUpdate">
+                <img src="../img/enviar.png" alt="enviar">
+              </button>
+
             </div>
           </div>
         </div>
+      <!--PARTE LATERAL - FIM-->
       </div>
 
+      <!--PARTE PRINCIPAL - INICIO-->
       <div class="dados">
+
         <div class="tipo" id="tipo"> </div>
 
         <h2 class="s"><strong>Sobre</strong></h2>
@@ -150,27 +162,36 @@
         <div class="adicionais" id="adicionais">
           <ul id="ulOp"></ul>
         </div>
+
+      <!--PARTE PRINCIPAL - FIM-->
       </div>
+
+  <!--PARTE DE DETALHES - FIM-->
   </div>
 
-  <div id="verificaAlRes">
-    <div class="aluguel_coment">
-      <div class="comentTitulo">
-        Comentários
-      </div>
-      <div id="coment_read" class="coment_read">
+    <!-- PAINEL DE COMENTARIOS MOBILE-->
+    <div id="verificaAlRes">
+          <div class="aluguel_coment">
+            <div class="comentTitulo">
+              Comentários
+            </div>
+            <div id="coment_postRes" class="coment_post">
+              <textarea class="imputComent" rows="2" id="imputComentRes" type="text" placeholder="Comentar" value="comentar"></textarea>
+              <button class="btnComentPost" id="btnComentPostRes">
+                <img src="../img/enviar.png" alt="enviar">
+              </button>
+              <button class="btnComentPost" id="btnComentUpdateRes">
+                <img src="../img/enviar.png" alt="enviar">
+              </button>
+            </div>
+            <div id="coment_readRes" class="coment_read">
 
+            </div>
+            
+          </div>
       </div>
-      <div id="coment_post" class="coment_post">
-        <textarea rows="2" id="imputComent" type="text" placeholder="Comentar"></textarea>
-        <button id="btnComentPost">
-          <img src="../img/enviar.png" alt="enviar">
-        </button>
-      </div>
-    </div>
-  </div>
 
-  </div>
+
 
     <footer class="rodape"></footer>
     
@@ -179,27 +200,36 @@
 
     <script>
 
+      //pega o valor do id presente na URL
       const parans = new URLSearchParams(window.location.search)
       var id = parans.get('id')
+      //coloca a variavel no escopo global
       window.id
       
+      //chama as funções imediatamente
       getComent()
       carregaDadosDetalhes()
+
+      //quando clicar no btnD o display do painel de aviso passara de none pra flex
       document.getElementById('btnD').addEventListener("click", function(){
         document.getElementById('divDel').setAttribute("class", "d-flex")
       })
+      //quando clicar no btnDel dentro do painel de aviso acionara a função
       document.getElementById('btnDel').addEventListener("click", function(){
         deletaDadosDetalhes(id) 
       })
+      //quando clicar no btnD o display do painel de aviso passara de flex para none
       document.getElementById('btnDelVoltar').addEventListener("click", function(){
         document.getElementById('divDel').setAttribute("class", "d-none")
       })
 
-
-      document.getElementById('btnU').addEventListener("click", function(){
-        window.location.href = window.location.origin + "/public/att_cadastro/car_att_cadastro.html"
-      })
+      //chama a função quando ouvir o click (desktop)
       document.getElementById('btnComentPost').addEventListener("click", postComent)
+      //chama a função quando ouvir o click (mobile)
+      document.getElementById('btnComentPostRes').addEventListener("click", postComent)
+
+      document.getElementById('btnComentUpdate').setAttribute("class", "d-none")
+      document.getElementById('btnComentUpdateRes').setAttribute("class", "d-none")
       
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
