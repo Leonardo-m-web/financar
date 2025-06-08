@@ -180,7 +180,6 @@ input[type="number"]::-webkit-outer-spin-button, input[type="number"]::-webkit-i
         height: 4rem !important;
     }
     #menuRes{
-        display: flex;
         position: fixed;
         z-index: 9999999;
         width: 100%;
